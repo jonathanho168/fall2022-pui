@@ -1,0 +1,12 @@
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+
+    /* sans-serif font */
+    font-family: Arial, Helvetica, sans-serif;
+}
