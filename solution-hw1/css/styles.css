@@ -1,4 +1,3 @@
-
 body {
     /* scroll horizontally as needed */
     overflow-x: auto;
@@ -11,6 +10,14 @@ body {
 
 }
 
+h1 {
+    font-weight: lighter;
+}
+
+a {
+    color: black;
+}
+
 #logo {
 
     width: 25%;
@@ -19,6 +26,8 @@ body {
     margin: 50px 750px 25px 10px;
 }
 
+/* used for these elements */
+/* what kind of thick? */
 .thick {
     position: relative;
     top: 20px;
@@ -31,7 +40,8 @@ body {
 
 .detail-price {
     font-weight: bold;
-    font-size: 14px;;
+    font-size: 14px;
+    margin-right: 5px;
 }
 
 .description {
@@ -44,18 +54,38 @@ body {
 
 .nav {
     text-decoration: none;
+    color: black;
     text-transform: uppercase;
+    font-size: larger;
+    margin-bottom: 10px;
+}
+
+.remove {
+    text-decoration: underline;
+    color: black;
+    font-size: small;
+    font-weight: bold;
 }
 
 .buntitle {
     text-decoration: underline;
+    color: black;
 }
+
 
 .bunitem {
     margin: 40px auto 0px auto;
     width: 300px;
     font-size: 24px;
     padding: 10px;
+}
+
+.margin-below {
+    margin-bottom: 20px;
+}
+
+.customize {
+    text-align: left;
 }
 
 .details {
@@ -76,6 +106,12 @@ body {
     height: 300px;
     box-sizing: border-box;
     border: 4px solid #000;
+}
+
+.add-to-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* https://www.w3schools.com/howto/howto_custom_select.asp */
