@@ -1,3 +1,4 @@
+/* default styling for everything */
 body {
     /* scroll horizontally as needed */
     overflow-x: auto;
@@ -10,14 +11,17 @@ body {
 
 }
 
+/* used in top of page (unique body content) */
 h1 {
     font-weight: lighter;
 }
 
+/* used for links */
 a {
     color: black;
 }
 
+/* just the logo at top left */
 #logo {
 
     width: 25%;
@@ -26,8 +30,7 @@ a {
     margin: 50px 750px 25px 10px;
 }
 
-/* used for these elements */
-/* what kind of thick? */
+/* just needed to make the line a little thicker */
 .thick {
     position: relative;
     top: 20px;
@@ -37,13 +40,14 @@ a {
     margin-bottom: 50px;
 }
 
-
+/* formatting for Price in detail.html next to Add to Cart button */
 .detail-price {
     font-weight: bold;
     font-size: 14px;
     margin-right: 5px;
 }
 
+/* Description of roll under picture */
 .description {
     font-size: 20px;
     display: block;
@@ -52,6 +56,7 @@ a {
     /* text-decoration: none; */
 }
 
+/* used for PRODUCT/CART links at the top */
 .nav {
     text-decoration: none;
     color: black;
@@ -60,6 +65,8 @@ a {
     margin-bottom: 10px;
 }
 
+/* for the remove link under each picture */
+/* shopping cart */
 .remove {
     text-decoration: underline;
     color: black;
@@ -67,12 +74,13 @@ a {
     font-weight: bold;
 }
 
+/* override default linking formatting */
 .buntitle {
     text-decoration: underline;
     color: black;
 }
 
-
+/* each gallery item */
 .bunitem {
     margin: 40px auto 0px auto;
     width: 300px;
@@ -80,14 +88,17 @@ a {
     padding: 10px;
 }
 
+/* class to add space below things */
 .margin-below {
     margin-bottom: 20px;
 }
 
+/* for the text box under pic in detail.html */
 .customize {
     text-align: left;
 }
 
+/* for the product + customization in detail.html */
 .details {
     margin: 40px auto 0px auto;
     width: 300px;
@@ -95,12 +106,14 @@ a {
     padding: 10px;
 }
 
+/* highlighting links/hover over product */
 .pwd,
 .bunitem:hover {
     background-color: yellow;
     font-weight: bold;
 }
 
+/* image formatting for buns */
 .bun {
     width: 300px;
     height: 300px;
@@ -108,6 +121,7 @@ a {
     border: 4px solid #000;
 }
 
+/* needed a smaller version for the shopping cart pictures */
 .bunsmall {
     width: 150px;
     height: 150px;
@@ -115,6 +129,7 @@ a {
     border: 4px solid #000;
 }
 
+/* needed to make a flex box so price + Add to Cart button go on same line */
 .add-to-cart {
     display: flex;
     justify-content: center;
