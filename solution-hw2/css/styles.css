@@ -30,7 +30,8 @@ a {
     margin: 50px 20px 25px 10px;
 }
 
-/* contains logo, PRODUCTS/CART, black line, page title */
+/* navbar contains logo, PRODUCTS/CART, black line, page title */
+.details,
 .navbar {
     display: flex;
     flex-direction: row;
@@ -40,13 +41,13 @@ a {
 /* right half = not-logo of navbar */
 .navbar-right {
     /* display: flex; */
-    /* text-align: left; */
+    text-align: right;
     flex-direction: column;
 }
 
 /* just the PRODUCTS and CARTS buttons */
 .navbuttons {
-    text-align: right;
+    /* text-align: right; */
     flex-direction: row;
 }
 
@@ -110,6 +111,7 @@ a {
 
 /* each gallery item */
 .bunitem {
+    display: flex;
     margin: 40px auto 0px auto;
     width: 300px;
     font-size: 24px;
@@ -163,6 +165,10 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* border: 3px solid #000;
+    text-align: center;
+
+    font-weight: bold; */
 }
 
 /* https://www.w3schools.com/howto/howto_custom_select.asp */
