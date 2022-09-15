@@ -4,28 +4,48 @@
   <head>
     <link href="../css/styles.css" rel="stylesheet">
     <meta charset="UTF-8">
-    <title>Product Details</title>
+    <title>Shopping Cart</title>
   </head>
 
+<!-- the only differences between pages -->
+<!-- are whether class="pwd" for PRODUCTS vs. CART -->
+<!-- title of page on line 7 -->
+<!-- Line next to logo <h1> -->
 
   <body>
-    <a href="gallery.html"><img id="logo" src="../static/logo-01.svg" alt="Bun Bun Bake Shop Logo"></a>
+    <div class="navbar">
 
-    <hr class="thick">
+      <!-- LEFT BIT OF NAVBAR -->
+      <div class="logo">
+            
+          <a href="gallery.html"><img src="../static/logo-01.svg" alt="Bun Bun Bake Shop Logo"></a>
 
-    <div>
-      <a href="./gallery.html" class="nav">PRODUCTS</a>
-      <br>
-      <a href="./cart.html" class="pwd nav">CART</a>
+      </div>
+
+      <!-- RIGHT HALF OF NAVBAR -->
+      <div class="navbar-right">
+        
+        <div class="nav-buttons">
+          <div>
+            <a href="./gallery.html" class="nav">PRODUCTS</a> 
+
+          </div>
+
+          <div>
+            <a href="./cart.html" class="pwd nav">CART</a>
+          </div>
+
+        </div>
+        <hr class="thick">
+
+        <h1>Shopping Cart</h1>
+      </div>
+      
     </div>
-
-    <br>
-
-    <br>
 
     <!-- BODY CONTENT STARTS HERE -->
 
-    <h1>Shopping Cart</h1>
+
 
 
     <!-- PRODUCT 1 of 2 -->
