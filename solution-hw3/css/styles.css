@@ -109,6 +109,7 @@ a {
 .custom-select {
     /* style="width:200px; */
     /* text-align: left; */
+    margin-bottom: 50px;
 }
 
 /* actual drop-down */
