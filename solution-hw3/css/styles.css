@@ -73,6 +73,7 @@ a {
     font-weight: bold;
     font-size: larger;
     margin-right: 5px;
+    width: 100px;
 }
 
 /* putting the cards in the gallery into a flex box */

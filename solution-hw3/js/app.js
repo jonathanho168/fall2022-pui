@@ -80,8 +80,10 @@ function onSelectChange() {
 
     // calculate final price of the product to be added to cart
     const basePrice = 2.49;
-    let calculatedPrice_temp = (basePrice + glazeAdapt) * packAdapt * 100;
-    let calculatedPrice_rounded = Math.round(calculatedPrice_temp) / 100;
+    let calculatedPrice_rounded = ((basePrice + glazeAdapt) * packAdapt).toFixed(2);    
+    console.log(basePrice);
+    console.log(glazeAdapt);
+    console.log(packAdapt);
     let calculatedPrice= ("$" + calculatedPrice_rounded);
 
     // modify webpage HTML
