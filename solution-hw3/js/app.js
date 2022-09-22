@@ -69,7 +69,7 @@ let packChange = document.querySelector('#packsize');
 packChange.addEventListener("change", onSelectChange);
 
 function onSelectChange() {
-    console.log("onSelectChange");
+    // console.log("onSelectChange");
 
 
     let glazeAdapt = Number(glazingChange.value);
