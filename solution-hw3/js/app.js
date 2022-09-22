@@ -69,6 +69,7 @@ let packChange = document.querySelector('#packsize');
 packChange.addEventListener("change", onSelectChange);
 
 function onSelectChange() {
+
     // console.log("onSelectChange");
 
 
@@ -81,9 +82,9 @@ function onSelectChange() {
     // calculate final price of the product to be added to cart
     const basePrice = 2.49;
     let calculatedPrice_rounded = ((basePrice + glazeAdapt) * packAdapt).toFixed(2);    
-    console.log(basePrice);
-    console.log(glazeAdapt);
-    console.log(packAdapt);
+    // console.log(basePrice);
+    // console.log(glazeAdapt);
+    // console.log(packAdapt);
     let calculatedPrice= ("$" + calculatedPrice_rounded);
 
     // modify webpage HTML
