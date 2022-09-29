@@ -1,0 +1,277 @@
+/* default styling for everything */
+body {
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+
+    /* sans-serif font */
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* used in top of page (unique body content) */
+h1 {
+    font-weight: lighter;
+    text-align: left;
+}
+
+/* used for links */
+a {
+    color: black;
+}
+
+/* just the logo at top left */
+.logo {
+
+    width: 350px;
+    flex-shrink: 0;
+
+    /* margin: top right bottom left */
+    margin: 50px 20px 25px 10px;
+}
+
+/* navbar contains logo, PRODUCTS/CART, black line, page title */
+.details,
+.navbar {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+/* right half = not-logo of navbar */
+.navbar-right {
+    /* display: flex; */
+    /* text-align: right; */
+    flex-direction: column;
+    width: 100%;
+}
+
+/* just the PRODUCTS and CARTS buttons */
+.nav-buttons {
+    display: flex;
+    text-align: right;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 50px;
+}
+
+/* just needed to make the line a little thicker */
+.thick {
+    position: relative;
+    top: 20px;
+    border: none;
+    height: 6px;
+    background: black;
+    margin-bottom: 50px;
+}
+
+/* formatting for Price in detail.html next to Add to Cart button */
+.detail-price {
+    font-weight: bold;
+    font-size: larger;
+    margin-right: 5px;
+    width: 100px;
+}
+
+/* putting the cards in the gallery into a flex box */
+.gallery {
+    display: flex;
+    width: 1200px;
+    flex-wrap: wrap;
+}
+
+
+/* Description of roll under picture */
+.description {
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    text-align: left;
+    /* text-decoration: none; */
+}
+
+/* used for PRODUCT/CART links at the top */
+.nav {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: larger;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    /* margin-top: 100px; */
+}
+
+/*  drop-down section for glazing, count */
+.custom-select {
+    /* style="width:200px; */
+    /* text-align: left; */
+    margin-bottom: 50px;
+}
+
+/* actual drop-down */
+.custom-select select {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+/* for the remove link under each picture */
+/* shopping cart */
+.remove {
+    text-decoration: underline;
+    color: black;
+    font-size: small;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* price in cart.html */
+.cart-price {
+    width: 150px;
+    text-align: right;
+    /* background-color: blueviolet; */
+}
+
+/* override default linking formatting */
+.buntitle {
+    text-decoration: underline;
+    color: black;
+}
+
+/* each gallery item */
+.bunitem {
+    /* display: flex; */
+    margin: 40px auto 0px auto;
+    width: 300px;
+    font-size: 24px;
+    padding: 10px;
+    /* flex-shrink: 3; */
+}
+
+/* gallery items in shopping cart */
+.bunitem1 {
+    display: flex;
+    margin: 40px auto 0px auto;
+    width: 800px;
+    font-size: 24px;
+    padding: 10px;
+    align-items: center;
+    /* flex-shrink: 3; */
+}
+
+/* bottom of cart.html */
+.checkout-row {
+    justify-content: flex-end;
+    visibility: visible;
+}
+
+/* a handy trick for when we include javascript */
+.hide {
+    display: none;
+}
+
+/* bun in detail.html */
+.bundetail {
+    width: 600px;
+    /* height: 300px; */
+    box-sizing: border-box;
+    border: 4px solid #000;
+}
+
+/* class to add space below things */
+.margin-below {
+    margin-bottom: 20px;
+}
+
+/* for the text box under pic in detail.html */
+.customize {
+    text-align: left;
+    margin-bottom: 80px;
+}
+
+/* right half of the body in detail.html */
+.detail-right {
+    text-align: left;
+    /* width: 400px; */
+    margin-left: 50px;
+}
+
+/* for the product + customization in detail.html */
+.details {
+    margin: 40px auto 0px auto;
+    width: 1000px;
+    font-size: 24px;
+    padding: 10px;
+}
+
+/* highlighting links/hover over product */
+.pwd,
+.bunitem:hover {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+/* image formatting for buns */
+.bun {
+    width: 300px;
+    height: 300px;
+    box-sizing: border-box;
+    border: 4px solid #000;
+}
+
+/* needed a smaller version for the shopping cart pictures */
+.bunsmall {
+    width: 150px;
+    height: 150px;
+    box-sizing: border-box;
+    border: 4px solid #000;
+}
+
+/* description, text in cart.html */
+.cart-text {
+    /* width: 700px; */
+    text-align: left;
+    margin-left: 100px;
+    flex-grow: 1;
+    /* background-color: aqua; */
+    /* align-items: center; */
+}
+
+/* total price at bottom of cart.html */
+.totalprice {
+    margin-left: 150px;
+}
+
+/* needed to make a flex box so price + Add to Cart button go on same line */
+.add-to-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-size: 50px; */
+    /* border: 3px solid #000;
+    text-align: center;
+
+    font-weight: bold; */
+}
+
+/* https://www.w3schools.com/howto/howto_custom_select.asp */
+/* Style the arrow inside the select element: */
+/* .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  } */
+  
+  /* Point the arrow upwards when the select box is open (active): */
+  /* .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+  } */
