@@ -33,7 +33,7 @@ function render() {
     detailRollPic.src = '../static/' + selectedRoll.imageFile;
 
     //update base price for the Details page
-    basePrice.innerText = selectedRoll.basePrice;
+    basePrice.innerText = "$" + selectedRoll.basePrice;
 
 }
 
@@ -42,7 +42,10 @@ let rollButton = document.querySelector('#add-to-cart');
 rollButton.addEventListener("click", addToCart);
 
 function addToCart() {
-    let rollChoice = new Roll(rollType, glazingChange, packChange, selectedRoll.basePrice);
+    // glazingChange is also declared in updatePrice.js
+    let glazingChange = document.querySelector('#glazing');
+    let glazingText = glazingChange.options[glazingChange.selectedIndex].text;
+    let rollChoice = new Roll(rollType, glazingText, Number(packChange.value), selectedRoll.basePrice);
     cart.push(rollChoice);
     console.log(cart);
 }
