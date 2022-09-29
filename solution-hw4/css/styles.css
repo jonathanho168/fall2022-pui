@@ -209,7 +209,8 @@ a {
 
 /* highlighting links/hover over product */
 .pwd,
-.bunitem:hover {
+.bunitem:hover,
+.cart-button:hover {
     background-color: yellow;
     font-weight: bold;
 }
