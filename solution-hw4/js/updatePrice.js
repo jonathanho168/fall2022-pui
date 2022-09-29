@@ -80,7 +80,7 @@ function onSelectChange() {
     let price = document.querySelector('#calc-price');
 
     // calculate final price of the product to be added to cart
-    const basePrice = 2.49;
+    const basePrice = selectedRoll.basePrice;
     let calculatedPrice_rounded = ((basePrice + glazeAdapt) * packAdapt).toFixed(2);    
     // console.log(basePrice);
     // console.log(glazeAdapt);
