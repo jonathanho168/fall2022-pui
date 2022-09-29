@@ -44,7 +44,9 @@ rollButton.addEventListener("click", addToCart);
 function addToCart() {
     // glazingChange is also declared in updatePrice.js
     let glazingChange = document.querySelector('#glazing');
+    // we want the text/name, not the value (which is the price)
     let glazingText = glazingChange.options[glazingChange.selectedIndex].text;
+
     let rollChoice = new Roll(rollType, glazingText, Number(packChange.value), selectedRoll.basePrice);
     cart.push(rollChoice);
     console.log(cart);
