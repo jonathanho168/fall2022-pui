@@ -25,3 +25,43 @@ const rolls = {
         "imageFile": "strawberry-cinnamon-roll.jpeg"
     }    
 };
+
+// list of glazing options with price adaptation
+let glazing = [
+    {
+        glazing: 'Keep original',
+        price: 0.0,
+    },
+    {
+        glazing: 'Sugar milk',
+        price: 0.0,
+    },
+    {
+        glazing: 'Vanilla milk',
+        price: 0.5,
+    },
+    {
+        glazing: 'Double chocolate',
+        price: 1.50,
+    }
+]
+
+// list of pack size options with price adaptation
+let packsize = [
+    {
+        size: 1,
+        priceFactor: 1,
+    },
+    {
+        size: 3,
+        priceFactor: 3,
+    },
+    {
+        size: 6,
+        priceFactor: 5,
+    },
+    {
+        size: 12,
+        priceFactor: 10,
+    }
+]
