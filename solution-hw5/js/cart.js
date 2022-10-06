@@ -107,7 +107,7 @@ function cartTotal() {
         sumPrice = sumPrice + parseFloat(roll.totalPrice());
     }
 
-    cartTotal.innerText = "$ " + sumPrice;
+    cartTotal.innerText = "$ " + sumPrice.toFixed(2);
 }
 
 cartTotal();
