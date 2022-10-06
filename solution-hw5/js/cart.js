@@ -11,9 +11,8 @@ class Roll {
         this.updateElement();
     }
 
-    // clone template and enable "Remove" button
+// clone template and enable "Remove" button
 createElement() {
-
     let template = document.querySelector("#buntemplate");
     
     const clone = template.content.cloneNode(true);
@@ -32,20 +31,23 @@ updateElement() {
     const packsize = this.element.querySelector(".cart-pack");
     const price = this.element.querySelector(".cart-price");
 
-    const totalPrice = this.totalPrice();
+    let totalPrice = this.totalPrice();
 
     // replace HTML content, inner text
     rollImage.src = '../static/' + rolls[this.type].imageFile;
-    productName.innerText = this.rollType + " Cinnamon Roll";
+    productName.innerText = this.type + " Cinnamon Roll";
     glazing.innerText = "Glazing: " + this.glazing;
-    packsize.innerText = "Pack size: " + toString(this.size);
-    price.innerText = "$ " + toString(totalPrice);
+    packsize.innerText = "Pack size: " + this.size;
+    price.innerText = "$ " + (totalPrice);
+    
 }
 
 // functionality of removing roll from cart
 removeRoll() {
     this.element.remove();
-    this.delete(this);
+    cart.delete(this);
+
+    cartTotal();
 }
 
 totalPrice() {
@@ -58,6 +60,7 @@ totalPrice() {
         }
     }
 
+
     let glazeAdapt = 0;
     for (const glaze of glazing) {
         if (this.glazing == glaze.glazing) {
@@ -65,8 +68,7 @@ totalPrice() {
         }
     }
 
-    const basePrice = this.element.basePrice;
-    const calculatedPrice_rounded = ((basePrice + glazeAdapt) * packAdapt).toFixed(2);
+    const calculatedPrice_rounded = ((this.basePrice + glazeAdapt) * packAdapt).toFixed(2);
 
     return calculatedPrice_rounded;
 }
@@ -78,7 +80,6 @@ const cart = new Set();
 
 // add 4 new Roll objects to my cart
 let original = "Original";
-// let index = rolls.indexOf(original);
 let originalRoll = new Roll(original, "Sugar Milk", 1, rolls[original].basePrice);
 cart.add(originalRoll);
 
@@ -96,7 +97,17 @@ cart.add(appleRoll);
 
 let cartSection = document.querySelector(".cartitems");
 for (const roll of cart) {
-    cartSection.prepend(roll.element)
+    cartSection.append(roll.element);
 }
 
+function cartTotal() {
+    let sumPrice = 0;
+    let cartTotal = document.querySelector(".sum-price");
+    for (const roll of cart) {
+        sumPrice = sumPrice + parseFloat(roll.totalPrice());
+    }
 
+    cartTotal.innerText = "$ " + sumPrice;
+}
+
+cartTotal();
