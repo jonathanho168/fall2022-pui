@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <link href="../css/styles.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+    <script defer src="../js/rollsData.js"></script>
+    <script defer src="../js/cart.js"></script>
+  </head>
+
+<!-- the only differences between pages -->
+<!-- are whether class="pwd" for PRODUCTS vs. CART -->
+<!-- title of page on line 7 -->
+<!-- Line next to logo <h1> -->
+
+  <body>
+    <div class="navbar">
+
+      <!-- LEFT BIT OF NAVBAR -->
+      <div class="logo">
+            
+          <a href="gallery.html"><img src="../static/logo-01.svg" alt="Bun Bun Bake Shop Logo"></a>
+
+      </div>
+
+      <!-- RIGHT HALF OF NAVBAR -->
+      <div class="navbar-right">
+        
+        <div class="nav-buttons">
+          <div>
+            <a href="./gallery.html" class="nav">PRODUCTS</a> 
+
+          </div>
+
+          <div>
+            <a href="./cart.html" class="pwd nav">CART</a>
+          </div>
+
+        </div>
+        <hr class="thick">
+
+        <h1>Shopping Cart</h1>
+      </div>
+      
+    </div>
+
+    <!-- BODY CONTENT STARTS HERE -->
+
+
+    <div>
+
+
+      <div class="cartitems">
+    <!-- TEMPLATE STARTS HERE -->
+        <template id="buntemplate">
+          <div class="bunitem1">
+
+              <div>
+                <img src="../static/original-cinnamon-roll.jpeg" class="cart-bunpic bunsmall" alt="Original cinnamon roll">
+                <div class="remove">
+                  Remove
+                </div>
+              </div>
+
+              <div class="cart-text">
+                
+                <div class="cart-productname">Original Cinnamon Roll</div>
+
+                <div class="cart-glazing">Glazing: Keep original</div>
+
+                <div class="cart-pack margin-below">Pack Size: 1</div>
+              </div>
+
+              <div class="cart-price">$ 2.49</div>
+            </div>
+      </template>
+
+    
+
+    </div>
+
+    <hr class="thick">
+
+
+
+<!-- TOTAL STARTING HERE -->
+    <div class="bunitem1">
+
+      <div>
+        <!-- <img src="../static/original-cinnamon-roll.jpeg" class="bunsmall" alt="Original cinnamon roll"> -->
+  
+      </div>
+  
+      <div class="cart-text">
+        
+        <div class="totalprice">
+          Total
+        </div>
+      </div>
+  
+      <div class="cart-price sum-price">$ 29.94</div>
+
+      
+  </div>
+
+  </div>
+
+
+
+    <br>
+<div class="bunitem1 checkout-row">
+
+          <div>
+          </div>
+
+          <div class="cart-price">
+            <button type="button">Checkout</button>          
+          </div>
+      </div>
+
+
+
+  </body>
+</html>
