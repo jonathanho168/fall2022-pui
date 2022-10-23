@@ -1,5 +1,5 @@
 // new array called cart
-const cart = [];
+let cart = [];
 
 // get roll type from URL
 const queryString = window.location.search;
@@ -10,6 +10,18 @@ const rollType = params.get('roll');
 
 // extract roll information (name, price, image path)
 let selectedRoll = rolls[rollType];
+
+
+function retrieveFromLocalStorage() {
+
+    if (localStorage.getItem('cart') != NULL) {
+        const cartString = localStorage.getItem('cart');
+        cart = JSON.part(cartString);
+    }
+
+    
+
+}
 
 function render() {
     // update relevant DOM elements
@@ -26,6 +38,8 @@ function render() {
     //update base price for the Details page
     basePrice.innerText = "$" + selectedRoll.basePrice;
 
+    retrieveFromLocalStorage();
+
 }
 
 // Add roll with customizations to cart
@@ -40,6 +54,10 @@ function addToCart() {
 
     let rollChoice = new Roll(rollType, glazingText, Number(packChange.value), selectedRoll.basePrice);
     cart.push(rollChoice);
+
+    const cartString = JSON.stringify(cart);
+    localStorage.setItem('cart', cartString);
+
     console.log(cart);
 }
 
