@@ -1,3 +1,14 @@
+class Roll {
+    constructor(rollType, rollGlazing, packSize, basePrice) {
+        this.type = rollType;
+        this.glazing =  rollGlazing;
+        this.size = packSize;
+        this.basePrice = basePrice;
+
+        this.element = null;
+    }
+}
+
 // new array called cart
 let cart = [];
 
@@ -16,14 +27,10 @@ let selectedRoll = rolls[rollType];
 
 
 function retrieveFromLocalStorage() {
-
     if (localStorage.getItem('cart') != null) {
         const cartString = localStorage.getItem('cart');
-        cart = JSON.part(cartString);
+        cart = JSON.parse(cartString);
     }
-
-    
-
 }
 
 function render() {
@@ -55,7 +62,9 @@ function addToCart() {
     // we want the text/name, not the value (which is the price)
     let glazingText = glazingChange.options[glazingChange.selectedIndex].text;
 
-    let rollChoice = new Roll(rollType, glazingText, Number(packChange.value), selectedRoll.basePrice);
+    let packText = packChange.options[packChange.selectedIndex].text;
+
+    let rollChoice = new Roll(rollType, glazingText, Number(packText), selectedRoll.basePrice);
     cart.push(rollChoice);
 
     const cartString = JSON.stringify(cart);
