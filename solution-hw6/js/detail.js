@@ -4,7 +4,10 @@ let cart = [];
 // get roll type from URL
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
-const rollType = params.get('roll');
+let rollType = params.get('roll');
+if (rollType == null) {
+    rollType = 'Original';
+}
 
 
 
@@ -14,7 +17,7 @@ let selectedRoll = rolls[rollType];
 
 function retrieveFromLocalStorage() {
 
-    if (localStorage.getItem('cart') != NULL) {
+    if (localStorage.getItem('cart') != null) {
         const cartString = localStorage.getItem('cart');
         cart = JSON.part(cartString);
     }
