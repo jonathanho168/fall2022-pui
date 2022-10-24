@@ -1,14 +1,3 @@
-class Roll {
-    constructor(rollType, rollGlazing, packSize, basePrice) {
-        this.type = rollType;
-        this.glazing =  rollGlazing;
-        this.size = packSize;
-        this.basePrice = basePrice;
-
-        this.element = null;
-    }
-}
-
 // new array called cart
 let cart = [];
 
@@ -19,7 +8,7 @@ let rollType = params.get('roll');
 if (rollType == null) {
     rollType = 'Original';
 }
-
+    
 
 
 // extract roll information (name, price, image path)
