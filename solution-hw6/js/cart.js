@@ -1,15 +1,3 @@
-class Roll {
-    constructor(rollType, rollGlazing, packSize, basePrice) {
-        this.type = rollType;
-        this.glazing =  rollGlazing;
-        this.size = packSize;
-        this.basePrice = basePrice;
-
-        this.element = null;
-    }
-}
-
-
 // functionality of removing roll from cart
 function removeRoll(roll) {
     //remove from DOM

@@ -1,3 +1,14 @@
+class Roll {
+    constructor(rollType, rollGlazing, packSize, basePrice) {
+        this.type = rollType;
+        this.glazing =  rollGlazing;
+        this.size = packSize;
+        this.basePrice = basePrice;
+
+        this.element = null;
+    }
+}
+
 // dictionary of rolls
 const rolls = {
     "Original": {
