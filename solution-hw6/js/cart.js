@@ -3,11 +3,11 @@ function removeRoll(roll) {
     //remove from DOM
     roll.element.remove();
 
-    // remove from cart
-
+    // remove from cart array
     let index = cart.indexOf(roll);
     cart.splice(index, 1);
 
+    // refresh everything
     cartTotal();
     updateLocalStorage();
 
@@ -36,6 +36,7 @@ function totalPrice(roll) {
     return calculatedPrice_rounded;
 }
 
+// prepare DOM element for a roll instance
 function createElement(roll) {
     let template = document.querySelector("#buntemplate");
     
@@ -67,30 +68,8 @@ function updateElement(roll) {
 }
 
 
-
-let cart = [];
-function retrieveFromLocalStorage() {
-    if (localStorage.getItem('cart') != null) {
-        const cartString = localStorage.getItem('cart');
-        cart = JSON.parse(cartString);
-    }
-}
-
-function updateLocalStorage() {
-    const cartString = JSON.stringify(cart);
-    localStorage.setItem('cart', cartString);
-}
-
-retrieveFromLocalStorage();
-
-
-let cartSection = document.querySelector(".cartitems");
-for (const roll of cart) {
-    createElement(roll);
-    updateElement(roll);
-    cartSection.append(roll.element);
-}
-
+// calculate total price of all cart items
+// update total price field
 function cartTotal() {
     let sumPrice = 0;
     let cartTotal = document.querySelector(".sum-price");
@@ -101,4 +80,21 @@ function cartTotal() {
     cartTotal.innerText = "$ " + sumPrice.toFixed(2);
 }
 
-cartTotal();
+function render() {
+    // populate DOM with cart items
+    // cart array is declared in rollsData.js
+    // call retrieveFromLocalStorage to ensure cart is up-to-date
+    retrieveFromLocalStorage();
+    let cartSection = document.querySelector(".cartitems");
+    for (const roll of cart) {
+        createElement(roll);
+        updateElement(roll);
+        cartSection.append(roll.element);
+    }
+
+    cartTotal();
+}
+
+
+
+render();

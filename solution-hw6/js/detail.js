@@ -1,6 +1,3 @@
-// new array called cart
-let cart = [];
-
 // get roll type from URL
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
@@ -13,14 +10,6 @@ if (rollType == null) {
 
 // extract roll information (name, price, image path)
 let selectedRoll = rolls[rollType];
-
-
-function retrieveFromLocalStorage() {
-    if (localStorage.getItem('cart') != null) {
-        const cartString = localStorage.getItem('cart');
-        cart = JSON.parse(cartString);
-    }
-}
 
 function render() {
     // update relevant DOM elements
@@ -56,8 +45,7 @@ function addToCart() {
     let rollChoice = new Roll(rollType, glazingText, Number(packText), selectedRoll.basePrice);
     cart.push(rollChoice);
 
-    const cartString = JSON.stringify(cart);
-    localStorage.setItem('cart', cartString);
+    updateLocalStorage();
 
     console.log(cart);
 }

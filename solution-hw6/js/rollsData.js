@@ -9,6 +9,21 @@ class Roll {
     }
 }
 
+// shopping cart array
+// if no cart exists in storage, use an empty cart array
+let cart = [];
+function retrieveFromLocalStorage() {
+    if (localStorage.getItem('cart') != null) {
+        const cartString = localStorage.getItem('cart');
+        cart = JSON.parse(cartString);
+    }
+}
+
+function updateLocalStorage() {
+    const cartString = JSON.stringify(cart);
+    localStorage.setItem('cart', cartString);
+}
+
 // dictionary of rolls
 const rolls = {
     "Original": {
