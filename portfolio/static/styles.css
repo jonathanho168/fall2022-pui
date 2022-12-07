@@ -14,6 +14,9 @@ body {
     background-color: "#F5F5F0";
 }
 
+footer {
+    margin-bottom: 20px;
+}
 
 
 .rightalign {
@@ -62,7 +65,7 @@ body {
 }
 
 .thin {
-    margin-bottom: 10px;
+    margin-bottom: 2vh;
     margin-top: 0px;
 }
 
@@ -84,7 +87,7 @@ body {
 }
 
 .predictive {
-    margin-bottom: 8%;
+    margin-bottom: 8vh;
     display: flex;
     /* flex-wrap: wrap-reverse; */
     justify-content: center;
