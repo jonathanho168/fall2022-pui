@@ -89,6 +89,7 @@ footer {
 .predictive {
     margin-bottom: 8vh;
     display: flex;
+    /* flex-flow: row; */
     /* flex-wrap: wrap-reverse; */
     justify-content: center;
     align-items: center;
