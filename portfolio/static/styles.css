@@ -137,3 +137,18 @@ body {
 .greeting {
     margin-bottom: 8%;
 }
+
+.card {
+    max-width: 35%;
+    border-radius: 10%;
+    /* background: url(../static/taipei101.png);
+    background-position: left top;
+    background-repeat: repeat;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;  */
+}
+
+.cards {
+    display: flex;
+}
