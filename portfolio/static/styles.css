@@ -38,7 +38,7 @@ footer {
 
  /* body of the page */
  .body {
-    display: flex;
+    /* display: flex; */
     /* flex-wrap: wrap; */
     padding:0 10px 10px 0;
     /* justify-content: center;
@@ -161,7 +161,7 @@ footer {
 .cards {
     display: flex;
 
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
 
 }
