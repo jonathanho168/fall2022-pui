@@ -1,3 +1,5 @@
+/* general formatting for whole page */
+
 nav .navbar-brand {
     /* size for brand */
     font-size: larger;
@@ -18,6 +20,12 @@ footer {
     margin-bottom: 20px;
 }
 
+/* heading of each page, e.g. about me! or what i study */
+.greeting {
+    margin-bottom: 5%;
+}
+
+/* general ways to format elements */
 .rightalign {
     text-align: right;
 }
@@ -35,17 +43,6 @@ footer {
     text-align: center;
  }
 
- /* body of the page */
- .body {
-    padding:0 10px 10px 0;
- }
-
-/* the logo at top left in the header */
-.logo {
-    width: 6.25%; 
-    flex-shrink: 0;
-    margin-right: 15px;
-}
 
 .large {
     font-size: xx-large;
@@ -68,6 +65,19 @@ footer {
     font-style: italic;
 }
 
+ /* body of the page */
+ .body {
+    padding:0 10px 10px 0;
+ }
+
+/* the logo at top left in the header */
+.logo {
+    width: 6.25%; 
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+
+/* body section part 1 of research.html */
 .predictive {
     margin-bottom: 4vh;
     display: flex;
@@ -78,6 +88,7 @@ footer {
     align-self: center;
 }
 
+/* text section of .predictive div in research.html */
 .predictive-text {
     min-width: 250px;
     max-width: 600px;
@@ -87,6 +98,7 @@ footer {
     /* margin-bottom: 40px; */
 }
 
+/* text section of the second half of research.html */
 .lolr,
 .scientific {
     min-width: 250px;
@@ -97,7 +109,7 @@ footer {
     /* margin-bottom: 30px; */
 }
 
-
+/* the second half of research.html */
 .previous-work {
     display: flex;
     flex-wrap: wrap;
@@ -107,6 +119,7 @@ footer {
     align-self: center;
 }
 
+/* the little card popouts with big-picture questions from research.html */
 .blurb {
     font-size: larger;
     font-weight: bold;
@@ -125,6 +138,7 @@ footer {
     /* margin-top: 30px; */
     margin-bottom: 30px;
 
+    /* glassmorphism */
     /* https://hype4.academy/tools/glassmorphism-generator */
     background: rgba( 255, 255, 255, 0.3 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -134,16 +148,13 @@ footer {
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
-
+/* i cannot figure out where this is used */
 .previous-card-text {
     max-width: 10vw;
     flex-wrap: wrap;
 }
 
-.greeting {
-    margin-bottom: 5%;
-}
-
+/* about.html cards within cards section */
 .card {
     border-radius: 10%;
     margin-left: 3vw;
@@ -153,6 +164,7 @@ footer {
     min-width: 250px;
 }
 
+/* about.html body section */
 .cards {
     display: flex;
     justify-content: center;
@@ -160,6 +172,7 @@ footer {
 
 }
 
+/* the three cards */
 #trois,
 #monet,
 #taipei101 {
@@ -167,6 +180,7 @@ footer {
     margin-bottom: 5vw;
 }
 
+/* the three tooltips */
 #tooltipmonet,
 #tooltiptrois,
 #tooltip101 {
@@ -183,6 +197,7 @@ footer {
     z-index: 1;
 }
 
+/* the arrow attached to the tooltip that points to the card */
 #arrowmonet,
 #arrowtrois,
 #arrow101,
@@ -195,6 +210,7 @@ footer {
   background: inherit;
 }
 
+/* hide the arrows */
 #arrowmonet,
 #arrowtrois,
 #arrow101 {
@@ -209,6 +225,7 @@ footer {
   transform: rotate(45deg);
 }
 
+/* positioning of tooltip/arrow */
 #tooltipmonet[data-popper-placement^='top'] > #arrowmonet,
 #tooltiptrois[data-popper-placement^='top'] > #arrowtrois,
 #tooltip101[data-popper-placement^='top'] > #arrow101 {
@@ -233,6 +250,7 @@ footer {
     left: -4px;
 }
 
+/* hide the tooltips */
 #tooltipmonet,
 #tooltiptrois,
 #tooltip101 {
@@ -246,6 +264,7 @@ footer {
     display: block;
 }
 
+/* footer of the page: copyright + email */
 .footer {
     margin-left: 15vw;
     margin-right: 15vw;

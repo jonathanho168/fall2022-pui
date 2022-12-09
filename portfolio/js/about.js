@@ -1,3 +1,4 @@
+// want to access all of the cards and tooltips/arrows
 const taipei101 = document.querySelector('#taipei101');
 const tooltip101 = document.querySelector('#tooltip101');
 
@@ -7,7 +8,7 @@ const tooltiptrois = document.querySelector('#tooltiptrois');
 const monet = document.querySelector('#monet');
 const tooltipmonet = document.querySelector('#tooltipmonet');
 
-
+// for all pairs, create poppers
 const poppermonet = Popper.createPopper(monet, tooltipmonet, {
     modifiers: [{
             name: 'offset',
@@ -41,6 +42,7 @@ const popper101 = Popper.createPopper(taipei101, tooltip101, {
 // Unfortunately, I don't know how to do currying in JS
 // Otherwise I would have made everything much cleaner
 
+// create show/hide functions for each popper
 function showmonet() {
     // Make the tooltip visible
     tooltipmonet.setAttribute('data-show', '');
@@ -134,6 +136,7 @@ function hide101() {
     }));
 }
 
+// add event listeners for each popper and each event
 const showEvents = ['mouseenter', 'focus'];
 const hideEvents = ['mouseleave', 'blur'];
 
