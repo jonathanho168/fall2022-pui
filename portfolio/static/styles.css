@@ -178,9 +178,10 @@ footer {
     font-size: 13px;
     border-radius: 4px;
 
-    max-width: 250px;
+    max-width: 225px;
     overflow-wrap: normal;
     text-align: center;
+    z-index: 1;
 }
 
 #arrowmonet,
