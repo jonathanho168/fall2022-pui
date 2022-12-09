@@ -84,8 +84,8 @@ footer {
     max-width: 600px;
     margin-left: 40px;
     margin-right: 40px;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    /* margin-top: 40px; */
+    /* margin-bottom: 40px; */
 }
 
 .lolr,
@@ -94,8 +94,8 @@ footer {
     max-width: 400px;
     margin-left: 30px;
     margin-right: 30px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    /* margin-top: 30px; */
+    /* margin-bottom: 30px; */
 }
 
 
@@ -123,7 +123,8 @@ footer {
 
     padding: 5px 5px 5px 5px;
     padding-top: 15px;
-    margin-bottom: 15px;
+    /* margin-top: 30px; */
+    margin-bottom: 30px;
 
     /* https://hype4.academy/tools/glassmorphism-generator */
     background: rgba( 255, 255, 255, 0.3 );
@@ -150,7 +151,7 @@ footer {
     margin-right: 3vw;
     align-items: center;
     justify-content: center;
-    min-width: 300px;
+    min-width: 250px;
 }
 
 .cards {
@@ -169,8 +170,7 @@ footer {
 
 #tooltipmonet,
 #tooltiptrois,
-#tooltip101,
-#tooltip {
+#tooltip101 {
     background: #333;
     color: white;
     font-weight: bold;
@@ -178,7 +178,7 @@ footer {
     font-size: 13px;
     border-radius: 4px;
 
-    max-width: 200px;
+    max-width: 250px;
     overflow-wrap: normal;
     text-align: center;
 }
@@ -186,11 +186,9 @@ footer {
 #arrowmonet,
 #arrowtrois,
 #arrow101,
-#arrow,
 #arrowmonet::before,
 #arrowtrois::before,
-#arrow101::before,
-#arrow::before {
+#arrow101::before {
   position: absolute;
   width: 8px;
   height: 8px;
@@ -199,15 +197,13 @@ footer {
 
 #arrowmonet,
 #arrowtrois,
-#arrow101,
-#arrow {
+#arrow101 {
   visibility: hidden;
 }
 
 #arrowmonet::before,
 #arrowtrois::before,
-#arrow101::before,
-#arrow::before {
+#arrow101::before {
   visibility: visible;
   content: '';
   transform: rotate(45deg);
@@ -215,43 +211,38 @@ footer {
 
 #tooltipmonet[data-popper-placement^='top'] > #arrowmonet,
 #tooltiptrois[data-popper-placement^='top'] > #arrowtrois,
-#tooltip101[data-popper-placement^='top'] > #arrow101,
-#tooltip[data-popper-placement^='top'] > #arrow {
+#tooltip101[data-popper-placement^='top'] > #arrow101 {
     bottom: -4px;
 }
 
+#tooltipmonet[data-popper-placement^='bottom'] > #arrowmonet,
 #tooltiptrois[data-popper-placement^='bottom'] > #arrowtrois,
-#tooltip101[data-popper-placement^='bottom'] > #arrow101,
-#tooltip[data-popper-placement^='bottom'] > #arrow {
+#tooltip101[data-popper-placement^='bottom'] > #arrow101 {
     top: -4px;
 }
 
 #tooltipmonet[data-popper-placement^='left'] > #arrowmonet,
 #tooltiptrois[data-popper-placement^='left'] > #arrowtrois,
-#tooltip101[data-popper-placement^='left'] > #arrow101,
-#tooltip[data-popper-placement^='left'] > #arrow {
+#tooltip101[data-popper-placement^='left'] > #arrow101 {
     right: -4px;
 }
 
 #tooltipmonet[data-popper-placement^='right'] > #arrowmonet,
 #tooltiptrois[data-popper-placement^='right'] > #arrowtrois,
-#tooltip101[data-popper-placement^='right'] > #arrow101
-#tooltip[data-popper-placement^='right'] > #arrow {
+#tooltip101[data-popper-placement^='right'] > #arrow101 {
     left: -4px;
 }
 
 #tooltipmonet,
 #tooltiptrois,
-#tooltip101,
-#tooltip {
+#tooltip101 {
     /* ... */
     display: none;
 }
 
 #tooltipmonet[data-show],
 #tooltiptrois[data-show],
-#tooltip101[data-show],
-#tooltip[data-show] {
+#tooltip101[data-show] {
     display: block;
 }
 
