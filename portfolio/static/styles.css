@@ -70,7 +70,7 @@ footer {
 }
 
 .predictive {
-    margin-bottom: 8vh;
+    margin-bottom: 4vh;
     display: flex;
     flex-wrap: wrap-reverse;
     justify-content: center;
@@ -163,9 +163,13 @@ footer {
 #trois,
 #monet,
 #taipei101 {
-    width: 20vw;
+    width: 16vw;
+    margin-bottom: 5vw;
 }
 
+#tooltipmonet,
+#tooltiptrois,
+#tooltip101,
 #tooltip {
     background: #333;
     color: white;
@@ -173,9 +177,19 @@ footer {
     padding: 4px 8px;
     font-size: 13px;
     border-radius: 4px;
+
+    max-width: 200px;
+    overflow-wrap: normal;
+    text-align: center;
 }
 
+#arrowmonet,
+#arrowtrois,
+#arrow101,
 #arrow,
+#arrowmonet::before,
+#arrowtrois::before,
+#arrow101::before,
 #arrow::before {
   position: absolute;
   width: 8px;
@@ -183,37 +197,60 @@ footer {
   background: inherit;
 }
 
+#arrowmonet,
+#arrowtrois,
+#arrow101,
 #arrow {
   visibility: hidden;
 }
 
+#arrowmonet::before,
+#arrowtrois::before,
+#arrow101::before,
 #arrow::before {
   visibility: visible;
   content: '';
   transform: rotate(45deg);
 }
 
+#tooltipmonet[data-popper-placement^='top'] > #arrowmonet,
+#tooltiptrois[data-popper-placement^='top'] > #arrowtrois,
+#tooltip101[data-popper-placement^='top'] > #arrow101,
 #tooltip[data-popper-placement^='top'] > #arrow {
     bottom: -4px;
 }
-  
+
+#tooltiptrois[data-popper-placement^='bottom'] > #arrowtrois,
+#tooltip101[data-popper-placement^='bottom'] > #arrow101,
 #tooltip[data-popper-placement^='bottom'] > #arrow {
     top: -4px;
 }
-  
+
+#tooltipmonet[data-popper-placement^='left'] > #arrowmonet,
+#tooltiptrois[data-popper-placement^='left'] > #arrowtrois,
+#tooltip101[data-popper-placement^='left'] > #arrow101,
 #tooltip[data-popper-placement^='left'] > #arrow {
     right: -4px;
 }
-  
+
+#tooltipmonet[data-popper-placement^='right'] > #arrowmonet,
+#tooltiptrois[data-popper-placement^='right'] > #arrowtrois,
+#tooltip101[data-popper-placement^='right'] > #arrow101
 #tooltip[data-popper-placement^='right'] > #arrow {
     left: -4px;
 }
 
+#tooltipmonet,
+#tooltiptrois,
+#tooltip101,
 #tooltip {
     /* ... */
     display: none;
 }
-  
+
+#tooltipmonet[data-show],
+#tooltiptrois[data-show],
+#tooltip101[data-show],
 #tooltip[data-show] {
     display: block;
 }

@@ -1,7 +1,24 @@
-const button = document.querySelector('#button');
-const tooltip = document.querySelector('#tooltip');
+const taipei101 = document.querySelector('#taipei101');
+const tooltip101 = document.querySelector('#tooltip101');
 
-const popperInstance = Popper.createPopper(button, tooltip, {
+const trois = document.querySelector('#trois');
+const tooltiptrois = document.querySelector('#tooltiptrois');
+
+const monet = document.querySelector('#monet');
+const tooltipmonet = document.querySelector('#tooltipmonet');
+
+
+const poppermonet = Popper.createPopper(monet, tooltipmonet, {
+    modifiers: [{
+            name: 'offset',
+            options: {
+              offset: [0, 12],
+            },
+          },
+        ],
+});
+
+const poppertrois = Popper.createPopper(trois, tooltiptrois, {
     modifiers: [{
             name: 'offset',
             options: {
@@ -11,12 +28,22 @@ const popperInstance = Popper.createPopper(button, tooltip, {
         ],
 });
 
-function show() {
+const popper101 = Popper.createPopper(taipei101, tooltip101, {
+    modifiers: [{
+            name: 'offset',
+            options: {
+              offset: [0, 8],
+            },
+          },
+        ],
+});
+
+function showmonet() {
     // Make the tooltip visible
-    tooltip.setAttribute('data-show', '');
+    tooltipmonet.setAttribute('data-show', '');
 
     // Enable the event listeners
-    popperInstance.setOptions((options) => ({
+    poppermonet.setOptions((options) => ({
         ...options,
         modifiers: [
         ...options.modifiers,
@@ -25,15 +52,77 @@ function show() {
     }));
 
     // Update its position
-    popperInstance.update();
+    poppermonet.update();
 }
 
-function hide() {
+function showtrois() {
+    // Make the tooltip visible
+    tooltiptrois.setAttribute('data-show', '');
+
+    // Enable the event listeners
+    poppertrois.setOptions((options) => ({
+        ...options,
+        modifiers: [
+        ...options.modifiers,
+        { name: 'eventListeners', enabled: true },
+        ],
+    }));
+
+    // Update its position
+    poppertrois.update();
+}
+
+function show101() {
+    // Make the tooltip visible
+    tooltip101.setAttribute('data-show', '');
+
+    // Enable the event listeners
+    popper101.setOptions((options) => ({
+        ...options,
+        modifiers: [
+        ...options.modifiers,
+        { name: 'eventListeners', enabled: true },
+        ],
+    }));
+
+    // Update its position
+    popper101.update();
+}
+
+function hidemonet() {
     // Hide the tooltip
-    tooltip.removeAttribute('data-show');
+    tooltipmonet.removeAttribute('data-show');
 
     // Disable the event listeners
-    popperInstance.setOptions((options) => ({
+    poppermonet.setOptions((options) => ({
+        ...options,
+        modifiers: [
+        ...options.modifiers,
+        { name: 'eventListeners', enabled: false },
+        ],
+    }));
+}
+
+function hidetrois() {
+    // Hide the tooltip
+    tooltiptrois.removeAttribute('data-show');
+
+    // Disable the event listeners
+    poppertrois.setOptions((options) => ({
+        ...options,
+        modifiers: [
+        ...options.modifiers,
+        { name: 'eventListeners', enabled: false },
+        ],
+    }));
+}
+
+function hide101() {
+    // Hide the tooltip
+    tooltip101.removeAttribute('data-show');
+
+    // Disable the event listeners
+    popper101.setOptions((options) => ({
         ...options,
         modifiers: [
         ...options.modifiers,
@@ -46,9 +135,13 @@ const showEvents = ['mouseenter', 'focus'];
 const hideEvents = ['mouseleave', 'blur'];
 
 showEvents.forEach((event) => {
-    button.addEventListener(event, show);
+    taipei101.addEventListener(event, show101);
+    trois.addEventListener(event, showtrois);
+    monet.addEventListener(event, showmonet);
 });
 
 hideEvents.forEach((event) => {
-    button.addEventListener(event, hide);
+    taipei101.addEventListener(event, hide101);
+    trois.addEventListener(event, hidetrois);
+    monet.addEventListener(event, hidemonet);
 });
