@@ -38,6 +38,9 @@ const popper101 = Popper.createPopper(taipei101, tooltip101, {
         ],
 });
 
+// Unfortunately, I don't know how to do currying in JS
+// Otherwise I would have made everything much cleaner
+
 function showmonet() {
     // Make the tooltip visible
     tooltipmonet.setAttribute('data-show', '');
