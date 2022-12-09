@@ -73,9 +73,9 @@ footer {
     font-weight: bolder;
 }
 
-.indent (
-    margin-left : 15px;
-)
+.indent {
+    margin-left: 15px;
+}
 
 .italic {
     font-style: italic;
